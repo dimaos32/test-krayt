@@ -1,16 +1,13 @@
 .header {
   position: relative;
-  margin-top: 45px;
-  margin-bottom: 40px;
-  padding: 16px 0;
+  padding: 60px 0 55px;
 
   @include viewport--md {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    padding: 40px 0 30px;
   }
 
   @include viewport--sm {
-    margin: 0;
+    padding: 16px 0;
   }
 }
 
