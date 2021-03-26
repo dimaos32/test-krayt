@@ -20,7 +20,7 @@ $color-outrageous-orange:         #ff5722;
 $color-harley-davidson-orange:    #dd2c00;
 
 $color-bunker:                    #222831;
-$color-regal-blue:                    #10375c;
+$color-regal-blue:                #10375c;
 
 // Gradient
 
@@ -42,8 +42,9 @@ $modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $viewport--sm:                      320px;
 $viewport--md:                      600px;
-$viewport--lg:                      1024px;
-$viewport--xl:                      1440px;
+$viewport--lg:                      992px;
+$viewport--xl:                      1200px;
+$viewport--xxl:                     1440px;
 
 // Retina
 //---------------------------------

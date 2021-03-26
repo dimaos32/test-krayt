@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 0 165px;
 
+  @include viewport--xl {
+    padding: 0 80px;
+  }
+
   @include viewport--lg {
     padding: 0 65px;
   }

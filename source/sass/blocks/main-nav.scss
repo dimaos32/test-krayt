@@ -1,5 +1,94 @@
+.main-nav {
+  @include viewport--md {
+    order: 3;
+    width: 100%;
+  }
+}
+
 .main-nav__toggle {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  outline: none;
   display: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 2px;
+    background-color: $color-regal-blue;
+    transition:
+      background-color$default-transition-settings,
+      box-shadow $default-transition-settings,
+      transform $default-transition-settings;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $color-outrageous-orange;
+    box-shadow: 0 6px $color-outrageous-orange;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-outrageous-orange;
+  }
+
+  &:active::before {
+    background-color: $color-harley-davidson-orange;
+    box-shadow: 0 6px $color-harley-davidson-orange;
+  }
+
+  &:active::after {
+    background-color: $color-harley-davidson-orange;
+  }
+
+  &::before {
+    top: 15px;
+    box-shadow: 0 6px $color-regal-blue;
+  }
+
+  &::after {
+    top: 27px;
+  }
+
+  @include viewport--sm {
+    display: block;
+  }
+
+  .main-nav--opened &::before {
+    box-shadow: none;
+    transform: translate(-50%, 6px) rotate(45deg);
+  }
+
+  .main-nav--opened &::after {
+    transform: translate(-50%, -6px) rotate(-45deg);
+  }
+}
+
+.main-nav__overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba($color-default-black, 0.5);
+
+  @include viewport--sm {
+    .main-nav--opened & {
+      display: block;
+    }
+  }
 }
 
 .main-nav__list {
@@ -8,20 +97,58 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include viewport--md {
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  @include viewport--sm {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translateX(100%);
+    width: 240px;
+    margin-top: 0;
+    padding-top: 60px;
+    background-color: $color-default-white;
+    overflow-y: auto;
+    transition: transform $default-transition-settings;
+
+    .main-nav--opened & {
+      transform: translateX(0);
+    }
+  }
 }
 
 .main-nav__item {
   padding: 0 10px;
+
+  @include viewport--lg {
+    padding: 0 5px;
+  }
+
+  @include viewport--sm {
+    padding: 0 20px;
+  }
 }
 
 .main-nav__link {
   display: block;
+  width: fit-content;
   padding: 8px 10px;
   font-family: $font-family--lato;
   line-height: 1.75;
   color: #222831;
   outline: none;
   transition: color $default-transition-settings;
+
+  &--user-link {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -30,5 +157,9 @@
 
   &:active {
     color: $color-harley-davidson-orange;
+  }
+
+  @include viewport--sm {
+    display: block;
   }
 }

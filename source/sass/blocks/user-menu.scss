@@ -1,5 +1,9 @@
 .user-menu {
   width: 200px;
+
+  @include viewport--lg {
+    width: fit-content;
+  }
 }
 
 .user-menu__list {
@@ -9,4 +13,8 @@
   margin-left: auto;
   padding: 0;
   list-style: none;
+
+  @include viewport--sm {
+    display: none;
+  }
 }

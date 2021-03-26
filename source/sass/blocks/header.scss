@@ -1,11 +1,25 @@
 .header {
+  position: relative;
   margin-top: 45px;
   margin-bottom: 40px;
   padding: 16px 0;
+
+  @include viewport--md {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  @include viewport--sm {
+    margin: 0;
+  }
 }
 
 .header__logo {
   width: 200px;
+
+  @include viewport--lg {
+    width: fit-content;
+  }
 
   a {
     display: block;
@@ -24,4 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include viewport--md {
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+
+  @include viewport--sm {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
