@@ -1,0 +1,27 @@
+.header {
+  margin-top: 45px;
+  margin-bottom: 40px;
+  padding: 16px 0;
+}
+
+.header__logo {
+  width: 200px;
+
+  a {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+  }
+
+  img {
+    display: block;
+    width: 87px;
+    height: 24px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

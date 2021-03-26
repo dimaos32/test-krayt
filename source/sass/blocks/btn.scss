@@ -1,0 +1,28 @@
+.btn {
+  display: block;
+  padding: 12px 24px;
+  line-height: 1.25;
+  color: $color-outrageous-orange;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+    background-color: $color-regal-blue;
+    box-shadow: 0 4px 16px rgba($color-regal-blue, 0.32);
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-harley-davidson-orange;
+  }
+
+  &--accent {
+    color: $color-default-white;
+    background-color: $color-outrageous-orange;
+    box-shadow: 0 4px 16px rgba($color-outrageous-orange, 0.32);
+  }
+}

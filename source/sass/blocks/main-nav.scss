@@ -1,0 +1,34 @@
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding: 0 10px;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 8px 10px;
+  font-family: $font-family--lato;
+  line-height: 1.75;
+  color: #222831;
+  outline: none;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-outrageous-orange;
+  }
+
+  &:active {
+    color: $color-harley-davidson-orange;
+  }
+}
