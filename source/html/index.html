@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="end">
+<html lang="en">
 <head>
 
   @@include("source/html/base/head.html")
@@ -8,37 +8,106 @@
 </head>
 <body>
 
-  <div style="display: none;">
-    @@include("build/img/sprite_auto.svg")
-  </div>
+<div style="display: none;">
+  @@include("build/img/sprite_auto.svg")
+</div>
 
-  <div class="wrapper">
-    @@include("source/html/base/header.html", {
-      "main": true
-    })
+<div class="wrapper">
+  @@include("source/html/base/header.html", {
+    "main": true
+  })
 
-    <main>
+  <main>
+    <h1 class="visually-hidden">Frispes Landing page</h1>
+
+    <section class="introducing">
       <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
+        <h2 class="introducing__title">Introducing</h2>
+
+        <div class="introducing__lead">
+          <h3 class="introducing__lead-title">
+            <span>Revolutionary</span> co-working space to realize your innovation
+          </h3>
+
+          <p class="introducing__lead-content">
+            In&nbsp;frispes, we&nbsp;spearhead new initiatives and provide mentorship to&nbsp;a&nbsp;new startup, and help grow their opportunities in&nbsp;key local, regional and global markets
+          </p>
+        </div>
+
+        <div class="introducing__slider">
+          <ul class="introducing__slides swiper-wrapper">
+            <li class="introducing__slide swiper-slide">
+              <picture>
+                <source type="image/webp"
+                  srcset="img/content/introducing-slide@1x.webp 1x, img/content/introducing-slide@2x.webp 2x">
+
+                <!-- 1х: 1110px; 2x: 2220px -->
+                <img
+                  src="img/content/introducing-slide@1x.jpg"
+                  srcset="img/content/introducing-slide@2x.jpg 2x"
+                  width="1110"
+                  height="566"
+                  alt="Meeting room">
+              </picture>
+            </li>
+
+            <li class="introducing__slide swiper-slide">
+              <picture>
+                <source type="image/webp"
+                  srcset="img/content/introducing-slide@1x.webp 1x, img/content/introducing-slide@2x.webp 2x">
+
+                <!-- 1х: 1110px; 2x: 2220px -->
+                <img
+                  src="img/content/introducing-slide@1x.jpg"
+                  srcset="img/content/introducing-slide@2x.jpg 2x"
+                  width="1110"
+                  height="566"
+                  alt="Meeting room">
+              </picture>
+            </li>
+
+            <li class="introducing__slide swiper-slide">
+              <picture>
+                <source type="image/webp"
+                  srcset="img/content/introducing-slide@1x.webp 1x, img/content/introducing-slide@2x.webp 2x">
+
+                <!-- 1х: 1110px; 2x: 2220px -->
+                <img
+                  src="img/content/introducing-slide@1x.jpg"
+                  srcset="img/content/introducing-slide@2x.jpg 2x"
+                  width="1110"
+                  height="566"
+                  alt="Meeting room">
+              </picture>
+            </li>
+
+            <li class="introducing__slide swiper-slide">
+              <picture>
+                <source type="image/webp"
+                  srcset="img/content/introducing-slide@1x.webp 1x, img/content/introducing-slide@2x.webp 2x">
+
+                <!-- 1х: 1110px; 2x: 2220px -->
+                <img
+                  src="img/content/introducing-slide@1x.jpg"
+                  srcset="img/content/introducing-slide@2x.jpg 2x"
+                  width="1110"
+                  height="566"
+                  alt="Meeting room">
+              </picture>
+            </li>
+          </ul>
+
+          <div class="introducing__pagination"></div>
+        </div>
       </div>
-    </main>
+    </section>
+  </main>
 
-    @@include("source/html/base/footer.html")
+  @@include("source/html/base/footer.html")
+</div>
 
-    @@include("source/html/base/modal.html", {
-      "name": "feedback"
-    })
+<script src="js/vendor.min.js"></script>
+<script src="js/main.min.js"></script>
 
-    @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
-    })
-  </div>
-
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
 </body>
 </html>
