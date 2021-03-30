@@ -22,9 +22,6 @@ const initSpacesSlider = () => {
   if (spacesSlider) {
     let slider = new Swiper('.spaces__slider', {
       speed: 400,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 30,
       scrollbar: {
         el: '.swiper-scrollbar',
         hide: false,
@@ -32,11 +29,40 @@ const initSpacesSlider = () => {
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
+        formatFractionCurrent: (num) => num < 10 ? '0' + num : num,
+        formatFractionTotal: (num) => num < 10 ? '0' + num : num,
       },
       navigation: {
-        nextEl: '.spaces__slider-btn--next',
-        prevEl: '.spaces__slider-btn--prev',
+        nextEl: '.spaces__slider-btn-next',
+        prevEl: '.spaces__slider-btn-prev',
       },
+      breakpoints: {
+        1440: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 25,
+        },
+        992: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+        },
+        600: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 12,
+        },
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 12,
+        },
+      }
     });
   }
 };

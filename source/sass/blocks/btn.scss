@@ -62,9 +62,14 @@
       display: block;
       width: 32px;
       height: 32px;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 1.2220px;
+    }
+
+    @include viewport--md {
+      padding: 16px;
+
+      span {
+        margin-right: 16px;
+      }
     }
   }
 }

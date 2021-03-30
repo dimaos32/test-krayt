@@ -10,18 +10,37 @@
   }
 }
 
-.spaces__wrapper {
+.spaces__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 52px;
+  margin: 0 auto 52px;
+  max-width: 1110px;
+
+  @include viewport--lg {
+    max-width: 730px;
+  }
+
+  @include viewport--md {
+    max-width: 552px;
+    margin-bottom: 32px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 16px;
+  }
 }
 
-.spaces__header {
+.spaces__lead {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 4px;
+
+  @include viewport--lg {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .spaces__title {
@@ -32,6 +51,17 @@
   font-size: 40px;
   line-height: 1.275;
   color: $color-regal-blue;
+
+  @include viewport--lg {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  @include viewport--sm {
+    margin: 0 auto 8px;
+    font-size: 32px;
+    text-align: center;
+  }
 }
 
 .spaces__desc {
@@ -41,119 +71,41 @@
   font-size: 18px;
   line-height: 1.56;
   color: $color-nobel;
+
+  @include viewport--sm {
+    width: 288px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.spaces__controls {
+  @include viewport--md {
+    display: none;
+  }
 }
 
 .spaces__slider {
+  max-width: 1110px;
+  margin: 0 auto;
   overflow: hidden;
-}
 
-.spaces__slider-controls {
-  align-self: flex-end;
-  flex-shrink: 0;
-  display: flex;
-  width: 230px;
-  margin-left: 50px;
-}
-
-.spaces__slider-btn {
-  display: flex;
-  height: 26px;
-  outline: none;
-
-  &--prev {
-    margin-left: auto;
+  @include viewport--xl {
+    width: 1040px;
   }
 
-  &--next {
-    margin-left: 23px;
-  }
-}
-
-.spaces__slider-btn-arrow {
-  position: relative;
-  width: 50px;
-  height: 4px;
-  margin: auto 0;
-  background-color: $color-nobel;
-  border-radius: 2px;
-  transition:
-    width $default-transition-settings,
-    background-color $default-transition-settings;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    width: 17px;
-    height: 3px;
-    background-color: $color-nobel;
-    border-radius: 2px;
-    transition: background-color $default-transition-settings;
+  @include viewport--lg {
+    width: 730px;
   }
 
-  .spaces__slider-btn--prev & {
-    margin-left: 3px;
-
-    &::before {
-      left: -2px;
-      transform: translateY(-50%) rotate(50deg);
-      transform-origin: 1px center;
-    }
-
-    &::after {
-      left: -2px;
-      transform: translateY(-50%) rotate(-50deg);
-      transform-origin: 1px center;
-    }
+  @include viewport--md {
+    width: 552px;
   }
 
-  .spaces__slider-btn--next & {
-    margin-right: 3px;
-
-    &::before {
-      right: -2px;
-      transform: translateY(-50%) rotate(-50deg);
-      transform-origin: 16px center;
-    }
-
-    &::after {
-      right: -2px;
-      transform: translateY(-50%) rotate(50deg);
-      transform-origin: 16px center;
-    }
-  }
-
-  .spaces__slider-btn:hover &,
-  .spaces__slider-btn:focus & {
-    width: 89px;
-    background-color: $color-outrageous-orange;
-
-    &::before,
-    &::after {
-      background-color: $color-outrageous-orange;
-    }
-  }
-
-  .spaces__slider-btn:active & {
-    width: 89px;
-    background-color: $color-harley-davidson-orange;
-
-    &::before,
-    &::after {
-      background-color: $color-harley-davidson-orange;
-    }
-  }
-
-  .spaces__slider-btn.swiper-button-disabled &,
-  .spaces__slider-btn.swiper-button-disabled:hover & {
-    width: 50px;
-    background-color: $color-gainsboro;
-
-    &::before,
-    &::after {
-      background-color: $color-gainsboro;
-    }
+  @include viewport--sm {
+    width: 288px;
   }
 }
 
@@ -163,6 +115,14 @@
   margin-bottom: 52px;
   padding: 0;
   list-style: none;
+
+  @include viewport--md {
+    margin-bottom: 32px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 16px;
+  }
 }
 
 .slider-scrollbar {
@@ -170,6 +130,14 @@
   height: 4px;
   margin: 0 auto 7px;
   background-color: $color-gainsboro;
+
+  @include viewport--lg {
+    width: 240px;
+  }
+
+  @include viewport--sm {
+    width: 288px;
+  }
 
   .swiper-scrollbar-drag {
     height: 4px;
@@ -185,15 +153,5 @@
     font-size: 18px;
     line-height: 1.56;
     color: $color-bunker;
-
-    &::before {
-      content: "0";
-    }
-  }
-
-  .swiper-pagination-total {
-    &::before {
-      content: "0";
-    }
   }
 }
