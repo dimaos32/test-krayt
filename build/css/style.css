@@ -1425,3 +1425,168 @@ button,
   line-height: 1.56;
   text-align: center;
   color: #ffffff; }
+
+.features {
+  margin-bottom: 112px; }
+  @media (max-width: 991px) {
+    .features {
+      margin-bottom: 48px; } }
+  @media (max-width: 599px) {
+    .features {
+      margin-bottom: 36px; } }
+
+.features__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 1199px) {
+    .features__container {
+      -ms-grid-columns: 3fr minmax(-webkit-min-content, 2fr);
+      -ms-grid-columns: 3fr minmax(min-content, 2fr);
+      grid-template-columns: 3fr minmax(-webkit-min-content, 2fr);
+      grid-template-columns: 3fr minmax(min-content, 2fr);
+      gap: 20px; } }
+  @media (max-width: 991px) {
+    .features__container {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      gap: 30px; } }
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  @media (max-width: 1199px) {
+    .features__list {
+      gap: 40px 30px; } }
+  @media (max-width: 991px) {
+    .features__list {
+      -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      max-width: 552px;
+      margin: 0 auto; } }
+  @media (max-width: 599px) {
+    .features__list {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px; } }
+
+.features__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .features__feature svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
+    margin-right: 24px; }
+  @media (max-width: 991px) {
+    .features__feature svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 20px; } }
+  @media (max-width: 599px) {
+    .features__feature svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 12px; } }
+
+.features__feature-desc {
+  margin: 0; }
+  .features__feature-desc span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Lora", "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.28;
+    color: #10375c; }
+  @media (max-width: 991px) {
+    .features__feature-desc span {
+      font-size: 24px; } }
+  @media (max-width: 599px) {
+    .features__feature-desc {
+      margin-left: -28px;
+      font-size: 14px; }
+      .features__feature-desc span {
+        margin-left: 28px;
+        font-size: 20px; } }
+
+.features__content {
+  padding: 54px;
+  color: #ffffff;
+  background-color: #10375c; }
+  @media (max-width: 1199px) {
+    .features__content {
+      padding: 40px; } }
+  @media (max-width: 991px) {
+    .features__content {
+      max-width: 552px;
+      margin: 0 auto; } }
+  @media (max-width: 599px) {
+    .features__content {
+      padding: 24px; } }
+
+.features__title {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  margin-right: 88px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5; }
+  .features__title::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: calc(100% + 15px);
+    width: 73px;
+    height: 2px;
+    background-color: #ffffff; }
+  @media (max-width: 1199px) {
+    .features__title {
+      font-size: 16px;
+      line-height: 1.62; } }
+
+.features__slogan {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Lora", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.275; }
+  @media (max-width: 1199px) {
+    .features__slogan {
+      font-size: 32px; } }
+  @media (max-width: 599px) {
+    .features__slogan {
+      font-size: 28px; } }
+
+.features__desc {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5; }
+  @media (max-width: 1199px) {
+    .features__desc {
+      font-size: 16px;
+      line-height: 1.62; } }
