@@ -1,0 +1,58 @@
+.spaces-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  min-height: 468px;
+}
+
+.spaces-card__wrapper {
+  position: relative;
+  min-height: 468px;
+  padding-top: 144px;
+  background-color: $color-regal-blue;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 16px;
+    width: 90px;
+    height: 90px;
+    background-image: url("../img/svg/space-card-decor.svg");
+  }
+
+  .spaces-card--photo & {
+    min-height: auto;
+    padding-top: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.spaces-card__title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: $font-family--lora;
+  font-size: 32px;
+  line-height: 1.28;
+  text-align: center;
+  color: $color-default-white;
+
+  .spaces-card--photo & {
+    margin: 0;
+    margin-top: auto;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $color-bunker;
+  }
+}
+
+.spaces-card__desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  color: $color-default-white;
+}

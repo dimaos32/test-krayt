@@ -90,6 +90,8 @@
 
 .introducing__slider {
   position: relative;
+  margin: 0 auto;
+  max-width: 1110px;
   overflow: hidden;
 }
 
@@ -107,7 +109,6 @@
     display: block;
     width: 1110px;
     height: auto;
-    max-width: 100%;
   }
 }
 
