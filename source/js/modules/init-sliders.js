@@ -23,11 +23,11 @@ const initSpacesSlider = () => {
     let slider = new Swiper('.spaces__slider', {
       speed: 400,
       scrollbar: {
-        el: '.swiper-scrollbar',
+        el: '.spaces__scrollbar',
         hide: false,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.spaces__pagination',
         type: 'fraction',
         formatFractionCurrent: (num) => num < 10 ? '0' + num : num,
         formatFractionTotal: (num) => num < 10 ? '0' + num : num,
@@ -92,10 +92,31 @@ const initGallerySlider = () => {
   }
 };
 
+const initReviewsSlider = () => {
+  const reviewsSlider = document.querySelector('.reviews__slider');
+
+  if (reviewsSlider) {
+    let slider = new Swiper('.reviews__slider', {
+      speed: 400,
+      scrollbar: {
+        el: '.reviews__scrollbar',
+        hide: false,
+      },
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.reviews__slider-btn-next',
+        prevEl: '.reviews__slider-btn-prev',
+      },
+    });
+  }
+};
+
 const initSliders = () => {
   initIntroducingSlider();
   initSpacesSlider();
   initGallerySlider();
+  initReviewsSlider();
 };
 
 export {initSliders};
