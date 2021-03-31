@@ -2,8 +2,6 @@
   align-self: flex-end;
   flex-shrink: 0;
   display: flex;
-  width: 230px;
-  margin-left: 50px;
 }
 
 .slider-controls__btn {
@@ -12,7 +10,6 @@
   outline: none;
 
   &--prev {
-    margin-left: auto;
   }
 
   &--next {

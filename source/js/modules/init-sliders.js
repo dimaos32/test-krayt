@@ -62,7 +62,32 @@ const initSpacesSlider = () => {
           slidesPerGroup: 1,
           spaceBetween: 12,
         },
-      }
+      },
+    });
+  }
+};
+
+const initGallerySlider = () => {
+  const introducingSlider = document.querySelector('.gallery__slider');
+
+  if (initGallerySlider) {
+    let slider = new Swiper('.gallery__slider', {
+      speed: 300,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '.gallery__slider-btn-next',
+        prevEl: '.gallery__slider-btn-prev',
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 30,
+        },
+        600: {
+          spaceBetween: 20,
+        },
+      },
     });
   }
 };
@@ -70,6 +95,7 @@ const initSpacesSlider = () => {
 const initSliders = () => {
   initIntroducingSlider();
   initSpacesSlider();
+  initGallerySlider();
 };
 
 export {initSliders};

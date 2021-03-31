@@ -70,6 +70,7 @@
   list-style: none;
 
   @include viewport--sm {
+    margin-top: 16px;
     margin-right: 0;
   }
 }

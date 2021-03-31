@@ -82,6 +82,10 @@
 }
 
 .spaces__controls {
+  justify-content: flex-end;
+  width: 230px;
+  margin-left: 50px;
+
   @include viewport--md {
     display: none;
   }
