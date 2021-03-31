@@ -3,6 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initBurgerMenu} from './modules/init-burger-menu';
 import {initSliders} from './modules/init-sliders';
+import {initFacilitiesTabs} from './modules/init-facilities-tabs';
 
 // Utils
 // ---------------------------------
@@ -15,3 +16,4 @@ iosVhFix();
 
 initBurgerMenu();
 initSliders();
+initFacilitiesTabs();

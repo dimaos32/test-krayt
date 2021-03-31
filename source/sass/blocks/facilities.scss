@@ -1,0 +1,212 @@
+.facilities {
+  margin-bottom: 112px;
+
+  @include viewport--md {
+    margin-bottom: 48px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 36px;
+  }
+}
+
+.facilities__title {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  margin-right: 88px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $color-bunker;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    left: calc(100% + 15px);
+    width: 73px;
+    height: 2px;
+    background-color: $color-bunker;
+  }
+}
+
+.facilities__lead {
+  max-width: 560px;
+  margin: 0;
+  margin-bottom: 56px;
+  font-family: $font-family--lora;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.275;
+  color: $color-regal-blue;
+
+  @include viewport--md {
+    margin-bottom: 32px;
+  }
+
+  @include viewport--sm {
+    max-width: 390px;
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+
+.facilities__album {
+  display: flex;
+  justify-content: space-between;
+
+  @include viewport--sm {
+    flex-direction: column-reverse;
+  }
+}
+
+.facilities__tabs {
+  flex-shrink: 0;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  list-style: none;
+
+  @include viewport--sm {
+    margin-right: 0;
+  }
+}
+
+.facilities__tab {
+  display: block;
+  width: 290px;
+  padding: 24px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $color-bunker;
+  text-align: left;
+  outline: none;
+  transition:
+    color $default-transition-settings,
+    background-color $default-transition-settings;
+
+  &--current {
+    position: relative;
+    color: $color-default-white;
+    background-color: $color-outrageous-orange;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      z-index: -1;
+      width: 290px;
+      height: 72px;
+      background-color: rgba($color-outrageous-orange, 0.3);
+      filter: blur(40px);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    position: relative;
+    color: $color-default-white;
+    background-color: $color-regal-blue;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      z-index: -1;
+      width: 290px;
+      height: 72px;
+      background-color: rgba($color-regal-blue, 0.3);
+      filter: blur(40px);
+    }
+  }
+
+  &:active {
+    position: relative;
+    color: $color-default-white;
+    background-color: $color-harley-davidson-orange;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      z-index: -1;
+      width: 290px;
+      height: 72px;
+      background-color: rgba($color-harley-davidson-orange, 0.3);
+      filter: blur(40px);
+    }
+  }
+
+  @include viewport--md {
+    padding: 16px;
+    width: 190px;
+    font-size: 16px;
+    line-height: 1.25;
+
+    &--current,
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        width: 190px;
+        height: 52px;
+      }
+    }
+  }
+
+  @include viewport--sm {
+    padding: 6px 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &--current,
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      width: 100%;
+      height: 32px;
+    }
+  }
+}
+
+.facilities__wrapper {
+  overflow: hidden;
+  width: 729px;
+  height: 453px;
+
+  @include viewport--md {
+    height: 300px;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+  }
+}
+
+.facilities__photos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform $default-transition-settings;
+}
+
+.facilities__photo {
+  display: block;
+  object-fit: cover;
+  width: 729px;
+  height: 453px;
+  color: $color-default-white;
+  background-color: $color-regal-blue;
+
+  @include viewport--md {
+    height: 300px;
+  }
+}

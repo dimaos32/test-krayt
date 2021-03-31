@@ -146,7 +146,7 @@
     left: calc(100% + 15px);
     width: 73px;
     height: 2px;
-    background-color: $color-default-white
+    background-color: $color-default-white;
   }
 
   @include viewport--lg {
